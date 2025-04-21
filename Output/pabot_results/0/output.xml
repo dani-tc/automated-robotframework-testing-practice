@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-18T15:00:23.386327" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="SeleniumTC1" source="C:\Users\danitc\PycharmProjects\RobotFrameworkTestProject\Tests\SeleniumTC1.robot">
+<kw name="Open My Browser" owner="LoginKeywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:23.632828" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-18T15:00:23.632555" elapsed="1.631718"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.264594" elapsed="0.032460"/>
+</kw>
+<arg>https://www.saucedemo.com</arg>
+<arg>chrome</arg>
+<status status="PASS" start="2025-04-18T15:00:23.631895" elapsed="1.665295"/>
+</kw>
+<test id="s1-s1-t1" name="Valid Login Test" line="19">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:25.317957" level="INFO">Element 'name:user-name' is displayed.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.297747" elapsed="0.020346"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.318326" elapsed="0.018034"/>
+</kw>
+<kw name="Login To Application" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:25.337379" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
+<arg>${UsernameInput}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.337114" elapsed="0.076884"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:25.414504" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-18T15:00:25.440791" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PasswordInput}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.414185" elapsed="0.056160"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:25.470803" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.470524" elapsed="0.061315"/>
+</kw>
+<arg>${INVALID_USERNAME}</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="PASS" start="2025-04-18T15:00:25.336617" elapsed="0.195350"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>xpath://*[@data-test='error']</arg>
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.532100" elapsed="0.017592"/>
+</kw>
+<kw name="Get Error Message" owner="LoginKeywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:25.561503" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<var>${LOGIN_ERROR_MESSAGE}</var>
+<arg>xpath://*[@data-test='error']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.550229" elapsed="0.011322"/>
+</kw>
+<return>
+<value>${LOGIN_ERROR_MESSAGE}</value>
+<status status="PASS" start="2025-04-18T15:00:25.561640" elapsed="0.000170"/>
+</return>
+<msg time="2025-04-18T15:00:25.561960" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<var>${ERROR_MESSAGE}</var>
+<status status="PASS" start="2025-04-18T15:00:25.549909" elapsed="0.012080"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-18T15:00:25.562308" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
+<arg>${ERROR_MESSAGE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.562119" elapsed="0.000233"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-18T15:00:28.562656" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-18T15:00:25.562452" elapsed="3.000305"/>
+</kw>
+<kw name="Login To Application" owner="LoginKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:28.563521" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<arg>${UsernameInput}</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.563308" elapsed="0.050020"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:28.613837" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-18T15:00:28.630916" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${PasswordInput}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.613514" elapsed="0.048205"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:28.662137" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.661871" elapsed="0.059453"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2025-04-18T15:00:28.562939" elapsed="0.158491"/>
+</kw>
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>//*[@data-test='title']</arg>
+<arg>Products</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.721558" elapsed="0.014702"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:28.739364" level="INFO">Page title is 'Swag Labs'.</msg>
+<arg>${HOMEPAGE_TITLE}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.736436" elapsed="0.002984"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-04-18T15:00:28.739852" level="INFO">Executing JavaScript:
+window.scrollTo(0,document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.739526" elapsed="0.003304"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-18T15:00:31.743156" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-18T15:00:28.742943" elapsed="3.000310"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-18T15:00:31.743405" elapsed="2.096691"/>
+</kw>
+<doc>Executable path is going to be deprecated</doc>
+<status status="PASS" start="2025-04-18T15:00:25.297282" elapsed="8.542981"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-04-18T15:00:33.840744" elapsed="0.000323"/>
+</kw>
+<status status="PASS" start="2025-04-18T15:00:23.413236" elapsed="10.428032"/>
+</suite>
+<status status="PASS" start="2025-04-18T15:00:23.401383" elapsed="10.440541"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Suites" id="s1" pass="1" fail="0" skip="0">Suites</stat>
+<stat name="SeleniumTC1" id="s1-s1" pass="1" fail="0" skip="0">Suites.SeleniumTC1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,6 @@
+datasources:441ec0910cef0cafb860cc66702a85b0a19aece5
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:e52e14340ee31016d4655091e2fbd9485b7fefff
+--suite Suites.SeleniumTC1
+--suite Suites.SeleniumTestTemplate

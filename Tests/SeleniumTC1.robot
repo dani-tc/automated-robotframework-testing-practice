@@ -1,7 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../Resources/LoginKeywords.robot
-Suite Setup         Open My Browser     https://www.saucedemo.com       chrome
+Suite Setup         Open My Browser     https://www.saucedemo.com       headlesschrome
 Suite Teardown      Close All Browsers
 
 *** Variables ***

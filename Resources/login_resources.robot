@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 
 *** Variables ***
 #Constants
-${BROWSER}              chrome
+${BROWSER}              headlesschrome
 ${URL}                  https://www.saucedemo.com
 ${HOMEPAGE_TITLE}       Swag Labs
 

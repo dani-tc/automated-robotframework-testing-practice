@@ -1,695 +1,630 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-28T10:01:52.466852" rpa="false" schemaversion="5">
-<suite id="s1" name="SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2">
+<robot generator="Rebot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-28T15:36:33.191334" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
 <suite id="s1-s1" name="SeleniumTC1" source="C:\Users\danitc\PycharmProjects\RobotFrameworkTestProject\Tests\SeleniumTC1.robot">
 <kw name="Open My Browser" owner="LoginKeywords" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:52.737048" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2025-04-28T15:36:22.623981" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T10:01:52.736713" elapsed="2.774463"/>
+<status status="PASS" start="2025-04-28T15:36:22.623741" elapsed="1.663031"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.511367" elapsed="0.032419"/>
+<status status="PASS" start="2025-04-28T15:36:24.287045" elapsed="0.030362"/>
 </kw>
 <arg>https://www.saucedemo.com</arg>
-<arg>chrome</arg>
-<status status="PASS" start="2025-04-28T10:01:52.735999" elapsed="2.807951"/>
+<arg>headlesschrome</arg>
+<status status="PASS" start="2025-04-28T15:36:22.623142" elapsed="1.694449"/>
 </kw>
 <test id="s1-s1-t1" name="Valid Login Test" line="19">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:55.599142" level="INFO">Element 'name:user-name' is displayed.</msg>
+<msg time="2025-04-28T15:36:24.340332" level="INFO">Element 'name:user-name' is displayed.</msg>
 <arg>${USERNAME_INPUT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.544479" elapsed="0.054749"/>
+<status status="PASS" start="2025-04-28T15:36:24.318260" elapsed="0.022216"/>
 </kw>
 <kw name="Element Should Be Enabled" owner="SeleniumLibrary">
 <arg>${USERNAME_INPUT}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.599478" elapsed="0.014196"/>
+<status status="PASS" start="2025-04-28T15:36:24.340711" elapsed="0.017640"/>
 </kw>
 <kw name="Login To Application" owner="LoginKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:55.614425" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:24.359282" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
 <arg>${UsernameInput}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.614256" elapsed="0.064226"/>
+<status status="PASS" start="2025-04-28T15:36:24.359036" elapsed="0.073684"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:55.678846" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:01:55.702265" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:24.433367" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:24.457130" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PasswordInput}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.678642" elapsed="0.051632"/>
+<status status="PASS" start="2025-04-28T15:36:24.432897" elapsed="0.055668"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:55.730591" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:24.489098" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.730421" elapsed="0.047797"/>
+<status status="PASS" start="2025-04-28T15:36:24.488745" elapsed="0.054807"/>
 </kw>
 <arg>${INVALID_USERNAME}</arg>
 <arg>${INVALID_PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:01:55.613968" elapsed="0.164358"/>
+<status status="PASS" start="2025-04-28T15:36:24.358597" elapsed="0.185099"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface: Username and password do not match any user in this service</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.778686" elapsed="0.015058"/>
+<status status="PASS" start="2025-04-28T15:36:24.543854" elapsed="0.015892"/>
 </kw>
 <kw name="Get Error Message" owner="LoginKeywords">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:55.804104" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.571634" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${LOGIN_ERROR_MESSAGE}</var>
 <arg>xpath://*[@data-test='error']</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.794222" elapsed="0.009924"/>
+<status status="PASS" start="2025-04-28T15:36:24.560217" elapsed="0.011462"/>
 </kw>
 <return>
 <value>${LOGIN_ERROR_MESSAGE}</value>
-<status status="PASS" start="2025-04-28T10:01:55.804225" elapsed="0.000059"/>
+<status status="PASS" start="2025-04-28T15:36:24.571769" elapsed="0.000173"/>
 </return>
-<msg time="2025-04-28T10:01:55.804417" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.572091" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${ERROR_MESSAGE}</var>
-<status status="PASS" start="2025-04-28T10:01:55.794017" elapsed="0.010425"/>
+<status status="PASS" start="2025-04-28T15:36:24.559948" elapsed="0.012170"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:01:55.804752" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.572424" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.804631" elapsed="0.000162"/>
+<status status="PASS" start="2025-04-28T15:36:24.572242" elapsed="0.000224"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T10:01:58.805238" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-04-28T15:36:27.572830" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T10:01:55.804913" elapsed="3.000428"/>
+<status status="PASS" start="2025-04-28T15:36:24.572554" elapsed="3.000377"/>
 </kw>
 <kw name="Login To Application" owner="LoginKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:58.806091" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:27.573744" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
 <arg>${UsernameInput}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.805933" elapsed="0.051158"/>
+<status status="PASS" start="2025-04-28T15:36:27.573528" elapsed="0.047973"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:58.857447" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:01:58.874299" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:27.622320" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:27.638360" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PasswordInput}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.857247" elapsed="0.047501"/>
+<status status="PASS" start="2025-04-28T15:36:27.621666" elapsed="0.045842"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:58.905067" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:27.667951" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.904905" elapsed="0.062991"/>
+<status status="PASS" start="2025-04-28T15:36:27.667669" elapsed="0.058323"/>
 </kw>
 <arg>${VALID_USERNAME}</arg>
 <arg>${VALID_PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:01:58.805639" elapsed="0.162357"/>
+<status status="PASS" start="2025-04-28T15:36:27.573130" elapsed="0.152970"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>//*[@data-test='title']</arg>
 <arg>Products</arg>
 <arg>10 seconds</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.968328" elapsed="0.014638"/>
+<status status="PASS" start="2025-04-28T15:36:27.726229" elapsed="0.012059"/>
 </kw>
 <kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:58.986428" level="INFO">Page title is 'Swag Labs'.</msg>
+<msg time="2025-04-28T15:36:27.741531" level="INFO">Page title is 'Swag Labs'.</msg>
 <arg>${HOMEPAGE_TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.983250" elapsed="0.003253"/>
+<status status="PASS" start="2025-04-28T15:36:27.738454" elapsed="0.003163"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:01:58.987020" level="INFO">Executing JavaScript:
+<msg time="2025-04-28T15:36:27.742174" level="INFO">Executing JavaScript:
 window.scrollTo(0,document.body.scrollHeight)
 Without any arguments.</msg>
 <arg>window.scrollTo(0,document.body.scrollHeight)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.986724" elapsed="0.003227"/>
+<status status="PASS" start="2025-04-28T15:36:27.741762" elapsed="0.003371"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-28T10:02:01.990358" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-04-28T15:36:30.746237" level="INFO">Slept 3 seconds.</msg>
 <arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-28T10:01:58.990167" elapsed="3.000297"/>
+<status status="PASS" start="2025-04-28T15:36:27.745300" elapsed="3.001037"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-04-28T10:02:01.990724" elapsed="2.124495"/>
+<status status="PASS" start="2025-04-28T15:36:30.746502" elapsed="2.101780"/>
 </kw>
 <doc>Executable path is going to be deprecated</doc>
-<status status="PASS" start="2025-04-28T10:01:55.544050" elapsed="8.571485"/>
+<status status="PASS" start="2025-04-28T15:36:24.317727" elapsed="8.530792"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-04-28T10:02:04.116170" elapsed="0.000138"/>
+<status status="PASS" start="2025-04-28T15:36:32.849005" elapsed="0.000225"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:01:52.493290" elapsed="11.623179"/>
+<status status="PASS" start="2025-04-28T15:36:22.426000" elapsed="10.226000"/>
 </suite>
 <suite id="s1-s2" name="SeleniumTestTemplate" source="C:\Users\danitc\PycharmProjects\RobotFrameworkTestProject\Tests\SeleniumTestTemplate.robot">
 <kw name="Open My Browser" owner="login_resources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:04.122033" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<msg time="2025-04-28T15:36:22.623037" level="INFO">Opening browser 'headlesschrome' to base url 'https://www.saucedemo.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T10:02:04.121881" elapsed="1.560501"/>
+<status status="PASS" start="2025-04-28T15:36:22.622793" elapsed="1.670208"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.682544" elapsed="0.023190"/>
+<status status="PASS" start="2025-04-28T15:36:24.293211" elapsed="0.024082"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:04.121728" elapsed="1.584132"/>
+<status status="PASS" start="2025-04-28T15:36:22.622237" elapsed="1.695247"/>
 </kw>
 <test id="s1-s2-t1" name="Right user empty password" line="27">
 <kw name="Invalid Login">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.707184" elapsed="0.000914"/>
+<status status="PASS" start="2025-04-28T15:36:24.319255" elapsed="0.001240"/>
 </kw>
 <kw name="Login To Application" owner="login_resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:05.708626" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:24.321712" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
 <arg>${USERNAME_INPUT}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.708452" elapsed="0.083617"/>
+<status status="PASS" start="2025-04-28T15:36:24.321248" elapsed="0.091750"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:05.792447" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:02:05.814895" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:24.413528" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:24.441593" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.792245" elapsed="0.045397"/>
+<status status="PASS" start="2025-04-28T15:36:24.413174" elapsed="0.055265"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:05.837997" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:24.469114" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.837808" elapsed="0.048273"/>
+<status status="PASS" start="2025-04-28T15:36:24.468662" elapsed="0.053542"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:05.708227" elapsed="0.177949"/>
+<status status="PASS" start="2025-04-28T15:36:24.320731" elapsed="0.201618"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.886292" elapsed="0.015746"/>
+<status status="PASS" start="2025-04-28T15:36:24.522481" elapsed="0.016676"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:05.910347" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
+<msg time="2025-04-28T15:36:24.549297" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.902190" elapsed="0.008230"/>
+<status status="PASS" start="2025-04-28T15:36:24.539337" elapsed="0.010050"/>
 </kw>
 <kw name="Get Error Message" owner="login_resources">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:05.918748" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Password is required</msg>
+<msg time="2025-04-28T15:36:24.558885" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Password is required</msg>
 <var>${LOGIN_ERROR_MESSAGE}</var>
 <arg>xpath://*[@data-test='error']</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.910782" elapsed="0.008003"/>
+<status status="PASS" start="2025-04-28T15:36:24.549899" elapsed="0.009030"/>
 </kw>
 <return>
 <value>${LOGIN_ERROR_MESSAGE}</value>
-<status status="PASS" start="2025-04-28T10:02:05.918857" elapsed="0.000050"/>
+<status status="PASS" start="2025-04-28T15:36:24.559016" elapsed="0.000173"/>
 </return>
-<msg time="2025-04-28T10:02:05.919027" level="INFO">${ERROR_MESSAGE} = Epic sadface: Password is required</msg>
+<msg time="2025-04-28T15:36:24.559352" level="INFO">${ERROR_MESSAGE} = Epic sadface: Password is required</msg>
 <var>${ERROR_MESSAGE}</var>
-<status status="PASS" start="2025-04-28T10:02:05.910589" elapsed="0.008461"/>
+<status status="PASS" start="2025-04-28T15:36:24.549580" elapsed="0.009800"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:05.919263" level="INFO">Epic sadface: Password is required</msg>
+<msg time="2025-04-28T15:36:24.559671" level="INFO">Epic sadface: Password is required</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.919152" elapsed="0.000148"/>
+<status status="PASS" start="2025-04-28T15:36:24.559496" elapsed="0.000219"/>
 </kw>
 <kw name="Clear Login Inputs" owner="login_resources">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${USERNAME_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.919571" elapsed="0.017738"/>
+<status status="PASS" start="2025-04-28T15:36:24.560057" elapsed="0.019399"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${PASSWORD_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.937482" elapsed="0.016093"/>
+<status status="PASS" start="2025-04-28T15:36:24.579612" elapsed="0.015807"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:05.919411" elapsed="0.034258"/>
+<status status="PASS" start="2025-04-28T15:36:24.559837" elapsed="0.035686"/>
 </kw>
 <arg>${VALID_USERNAME}</arg>
 <arg>${EMPTY}</arg>
-<status status="PASS" start="2025-04-28T10:02:05.706510" elapsed="0.247208"/>
+<status status="PASS" start="2025-04-28T15:36:24.318261" elapsed="0.277318"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:05.705962" elapsed="0.247943"/>
+<status status="PASS" start="2025-04-28T15:36:24.317672" elapsed="0.278025"/>
 </test>
 <test id="s1-s2-t2" name="Right user wrong password" line="28">
 <kw name="Invalid Login">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.954661" elapsed="0.000630"/>
+<status status="PASS" start="2025-04-28T15:36:24.596718" elapsed="0.000688"/>
 </kw>
 <kw name="Login To Application" owner="login_resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:05.955776" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:24.598013" level="INFO">Typing text 'standard_user' into text field 'name:user-name'.</msg>
 <arg>${USERNAME_INPUT}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:05.955627" elapsed="0.046203"/>
+<status status="PASS" start="2025-04-28T15:36:24.597793" elapsed="0.044975"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.002188" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:02:06.018190" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:24.643239" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:24.662645" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.001988" elapsed="0.039387"/>
+<status status="PASS" start="2025-04-28T15:36:24.642926" elapsed="0.042678"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.041684" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:24.686042" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.041526" elapsed="0.034624"/>
+<status status="PASS" start="2025-04-28T15:36:24.685768" elapsed="0.035327"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:05.955420" elapsed="0.120822"/>
+<status status="PASS" start="2025-04-28T15:36:24.597525" elapsed="0.123673"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.076355" elapsed="0.008482"/>
+<status status="PASS" start="2025-04-28T15:36:24.721327" elapsed="0.008486"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.093653" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
+<msg time="2025-04-28T15:36:24.738465" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.085001" elapsed="0.008727"/>
+<status status="PASS" start="2025-04-28T15:36:24.729960" elapsed="0.008586"/>
 </kw>
 <kw name="Get Error Message" owner="login_resources">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.102229" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.747434" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${LOGIN_ERROR_MESSAGE}</var>
 <arg>xpath://*[@data-test='error']</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.094084" elapsed="0.008183"/>
+<status status="PASS" start="2025-04-28T15:36:24.739035" elapsed="0.008440"/>
 </kw>
 <return>
 <value>${LOGIN_ERROR_MESSAGE}</value>
-<status status="PASS" start="2025-04-28T10:02:06.102441" elapsed="0.000047"/>
+<status status="PASS" start="2025-04-28T15:36:24.747701" elapsed="0.000139"/>
 </return>
-<msg time="2025-04-28T10:02:06.102601" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.747975" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${ERROR_MESSAGE}</var>
-<status status="PASS" start="2025-04-28T10:02:06.093892" elapsed="0.008733"/>
+<status status="PASS" start="2025-04-28T15:36:24.738729" elapsed="0.009274"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:06.102832" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.748288" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.102724" elapsed="0.000143"/>
+<status status="PASS" start="2025-04-28T15:36:24.748117" elapsed="0.000216"/>
 </kw>
 <kw name="Clear Login Inputs" owner="login_resources">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${USERNAME_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.103128" elapsed="0.016571"/>
+<status status="PASS" start="2025-04-28T15:36:24.748673" elapsed="0.017968"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${PASSWORD_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.119855" elapsed="0.016961"/>
+<status status="PASS" start="2025-04-28T15:36:24.766795" elapsed="0.016511"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.102972" elapsed="0.033947"/>
+<status status="PASS" start="2025-04-28T15:36:24.748459" elapsed="0.034964"/>
 </kw>
 <arg>${VALID_USERNAME}</arg>
 <arg>${INVALID_PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:05.954428" elapsed="0.182539"/>
+<status status="PASS" start="2025-04-28T15:36:24.596380" elapsed="0.187101"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:05.954141" elapsed="0.183081"/>
+<status status="PASS" start="2025-04-28T15:36:24.595953" elapsed="0.187645"/>
 </test>
 <test id="s1-s2-t3" name="Wrong user right password" line="29">
 <kw name="Invalid Login">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.138210" elapsed="0.000680"/>
+<status status="PASS" start="2025-04-28T15:36:24.784415" elapsed="0.000701"/>
 </kw>
 <kw name="Login To Application" owner="login_resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.139357" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:24.785702" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
 <arg>${USERNAME_INPUT}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.139212" elapsed="0.041609"/>
+<status status="PASS" start="2025-04-28T15:36:24.785504" elapsed="0.037274"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.181159" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:02:06.197836" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:24.823237" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:24.840095" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.180969" elapsed="0.046456"/>
+<status status="PASS" start="2025-04-28T15:36:24.822934" elapsed="0.044840"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.227725" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:24.868194" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.227569" elapsed="0.032214"/>
+<status status="PASS" start="2025-04-28T15:36:24.867926" elapsed="0.031225"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:06.139006" elapsed="0.120877"/>
+<status status="PASS" start="2025-04-28T15:36:24.785233" elapsed="0.114022"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.260011" elapsed="0.008619"/>
+<status status="PASS" start="2025-04-28T15:36:24.899379" elapsed="0.008673"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.276611" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
+<msg time="2025-04-28T15:36:24.916924" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.268775" elapsed="0.007904"/>
+<status status="PASS" start="2025-04-28T15:36:24.908193" elapsed="0.008816"/>
 </kw>
 <kw name="Get Error Message" owner="login_resources">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.284846" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.925400" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${LOGIN_ERROR_MESSAGE}</var>
 <arg>xpath://*[@data-test='error']</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.277027" elapsed="0.007856"/>
+<status status="PASS" start="2025-04-28T15:36:24.917489" elapsed="0.007947"/>
 </kw>
 <return>
 <value>${LOGIN_ERROR_MESSAGE}</value>
-<status status="PASS" start="2025-04-28T10:02:06.284946" elapsed="0.000042"/>
+<status status="PASS" start="2025-04-28T15:36:24.925506" elapsed="0.000125"/>
 </return>
-<msg time="2025-04-28T10:02:06.285098" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.925755" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${ERROR_MESSAGE}</var>
-<status status="PASS" start="2025-04-28T10:02:06.276833" elapsed="0.008288"/>
+<status status="PASS" start="2025-04-28T15:36:24.917189" elapsed="0.008592"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:06.285327" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:24.926045" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.285220" elapsed="0.000143"/>
+<status status="PASS" start="2025-04-28T15:36:24.925882" elapsed="0.000204"/>
 </kw>
 <kw name="Clear Login Inputs" owner="login_resources">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${USERNAME_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.285618" elapsed="0.016612"/>
+<status status="PASS" start="2025-04-28T15:36:24.926411" elapsed="0.016314"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${PASSWORD_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.302403" elapsed="0.017422"/>
+<status status="PASS" start="2025-04-28T15:36:24.942875" elapsed="0.016286"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.285467" elapsed="0.034463"/>
+<status status="PASS" start="2025-04-28T15:36:24.926199" elapsed="0.033062"/>
 </kw>
 <arg>${INVALID_USERNAME}</arg>
 <arg>${VALID_PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:06.137949" elapsed="0.182042"/>
+<status status="PASS" start="2025-04-28T15:36:24.784078" elapsed="0.175240"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.137577" elapsed="0.182703"/>
+<status status="PASS" start="2025-04-28T15:36:24.783801" elapsed="0.175625"/>
 </test>
 <test id="s1-s2-t4" name="Wrong user empty password" line="30">
 <kw name="Invalid Login">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.321558" elapsed="0.000754"/>
+<status status="PASS" start="2025-04-28T15:36:24.960468" elapsed="0.000702"/>
 </kw>
 <kw name="Login To Application" owner="login_resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.322785" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:24.961759" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
 <arg>${USERNAME_INPUT}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.322641" elapsed="0.040645"/>
+<status status="PASS" start="2025-04-28T15:36:24.961560" elapsed="0.038377"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.363621" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:02:06.380821" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:25.000395" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:25.017628" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.363431" elapsed="0.038100"/>
+<status status="PASS" start="2025-04-28T15:36:25.000093" elapsed="0.036387"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.401829" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:25.036894" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.401672" elapsed="0.032544"/>
+<status status="PASS" start="2025-04-28T15:36:25.036635" elapsed="0.031828"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:06.322433" elapsed="0.111917"/>
+<status status="PASS" start="2025-04-28T15:36:24.961288" elapsed="0.107369"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.434505" elapsed="0.010464"/>
+<status status="PASS" start="2025-04-28T15:36:25.068910" elapsed="0.008953"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.453028" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
+<msg time="2025-04-28T15:36:25.089499" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.445201" elapsed="0.007894"/>
+<status status="PASS" start="2025-04-28T15:36:25.078112" elapsed="0.011473"/>
 </kw>
 <kw name="Get Error Message" owner="login_resources">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.461210" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:25.098332" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${LOGIN_ERROR_MESSAGE}</var>
 <arg>xpath://*[@data-test='error']</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.453433" elapsed="0.007812"/>
+<status status="PASS" start="2025-04-28T15:36:25.090075" elapsed="0.008296"/>
 </kw>
 <return>
 <value>${LOGIN_ERROR_MESSAGE}</value>
-<status status="PASS" start="2025-04-28T10:02:06.461309" elapsed="0.000040"/>
+<status status="PASS" start="2025-04-28T15:36:25.098444" elapsed="0.000133"/>
 </return>
-<msg time="2025-04-28T10:02:06.461456" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:25.098700" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${ERROR_MESSAGE}</var>
-<status status="PASS" start="2025-04-28T10:02:06.453248" elapsed="0.008230"/>
+<status status="PASS" start="2025-04-28T15:36:25.089766" elapsed="0.008961"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:06.461680" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:25.098994" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.461572" elapsed="0.000144"/>
+<status status="PASS" start="2025-04-28T15:36:25.098831" elapsed="0.000204"/>
 </kw>
 <kw name="Clear Login Inputs" owner="login_resources">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${USERNAME_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.461968" elapsed="0.016813"/>
+<status status="PASS" start="2025-04-28T15:36:25.099370" elapsed="0.016604"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${PASSWORD_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.478940" elapsed="0.015549"/>
+<status status="PASS" start="2025-04-28T15:36:25.116158" elapsed="0.015644"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.461819" elapsed="0.032764"/>
+<status status="PASS" start="2025-04-28T15:36:25.099155" elapsed="0.032754"/>
 </kw>
 <arg>${INVALID_USERNAME}</arg>
 <arg>${EMPTY}</arg>
-<status status="PASS" start="2025-04-28T10:02:06.321029" elapsed="0.173601"/>
+<status status="PASS" start="2025-04-28T15:36:24.959902" elapsed="0.172064"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.320638" elapsed="0.174174"/>
+<status status="PASS" start="2025-04-28T15:36:24.959619" elapsed="0.172451"/>
 </test>
 <test id="s1-s2-t5" name="Wrong user wrong password" line="31">
 <kw name="Invalid Login">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10 seconds</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.495667" elapsed="0.000656"/>
+<status status="PASS" start="2025-04-28T15:36:25.132925" elapsed="0.000701"/>
 </kw>
 <kw name="Login To Application" owner="login_resources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.496787" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
+<msg time="2025-04-28T15:36:25.134218" level="INFO">Typing text 'test' into text field 'name:user-name'.</msg>
 <arg>${USERNAME_INPUT}</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.496642" elapsed="0.039053"/>
+<status status="PASS" start="2025-04-28T15:36:25.134012" elapsed="0.038144"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.536039" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
-<msg time="2025-04-28T10:02:06.552444" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-04-28T15:36:25.172609" level="INFO">Typing password into text field 'xpath://input[@id='password']'.</msg>
+<msg time="2025-04-28T15:36:25.189158" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${PASSWORD_INPUT}</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.535843" elapsed="0.040454"/>
+<status status="PASS" start="2025-04-28T15:36:25.172311" elapsed="0.039075"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.576594" level="INFO">Clicking element 'id:login-button'.</msg>
+<msg time="2025-04-28T15:36:25.211801" level="INFO">Clicking element 'id:login-button'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.576439" elapsed="0.031176"/>
+<status status="PASS" start="2025-04-28T15:36:25.211537" elapsed="0.031974"/>
 </kw>
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:06.496436" elapsed="0.111275"/>
+<status status="PASS" start="2025-04-28T15:36:25.133744" elapsed="0.109881"/>
 </kw>
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.607826" elapsed="0.008281"/>
+<status status="PASS" start="2025-04-28T15:36:25.243746" elapsed="0.008673"/>
 </kw>
 <kw name="Element Should Contain" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.624571" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
+<msg time="2025-04-28T15:36:25.260928" level="INFO">Element 'xpath://*[@data-test='error']' contains text 'Epic sadface:'.</msg>
 <arg>xpath://*[@data-test='error']</arg>
 <arg>Epic sadface:</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.616245" elapsed="0.008398"/>
+<status status="PASS" start="2025-04-28T15:36:25.252557" elapsed="0.008445"/>
 </kw>
 <kw name="Get Error Message" owner="login_resources">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T10:02:06.632885" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:25.269892" level="INFO">${LOGIN_ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${LOGIN_ERROR_MESSAGE}</var>
 <arg>xpath://*[@data-test='error']</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.624999" elapsed="0.007919"/>
+<status status="PASS" start="2025-04-28T15:36:25.261466" elapsed="0.008465"/>
 </kw>
 <return>
 <value>${LOGIN_ERROR_MESSAGE}</value>
-<status status="PASS" start="2025-04-28T10:02:06.632983" elapsed="0.000037"/>
+<status status="PASS" start="2025-04-28T15:36:25.270005" elapsed="0.000141"/>
 </return>
-<msg time="2025-04-28T10:02:06.633126" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:25.270272" level="INFO">${ERROR_MESSAGE} = Epic sadface: Username and password do not match any user in this service</msg>
 <var>${ERROR_MESSAGE}</var>
-<status status="PASS" start="2025-04-28T10:02:06.624806" elapsed="0.008343"/>
+<status status="PASS" start="2025-04-28T15:36:25.261170" elapsed="0.009128"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:06.633360" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
+<msg time="2025-04-28T15:36:25.270571" level="INFO">Epic sadface: Username and password do not match any user in this service</msg>
 <arg>${ERROR_MESSAGE}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.633254" elapsed="0.000141"/>
+<status status="PASS" start="2025-04-28T15:36:25.270405" elapsed="0.000223"/>
 </kw>
 <kw name="Clear Login Inputs" owner="login_resources">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${USERNAME_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.633652" elapsed="0.016475"/>
+<status status="PASS" start="2025-04-28T15:36:25.271020" elapsed="0.016654"/>
 </kw>
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${PASSWORD_INPUT}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.650316" elapsed="0.016688"/>
+<status status="PASS" start="2025-04-28T15:36:25.287865" elapsed="0.016873"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.633497" elapsed="0.033607"/>
+<status status="PASS" start="2025-04-28T15:36:25.270793" elapsed="0.034053"/>
 </kw>
 <arg>${INVALID_USERNAME}</arg>
 <arg>${INVALID_PASSWORD}</arg>
-<status status="PASS" start="2025-04-28T10:02:06.495429" elapsed="0.171723"/>
+<status status="PASS" start="2025-04-28T15:36:25.132587" elapsed="0.172316"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:06.495104" elapsed="0.172238"/>
+<status status="PASS" start="2025-04-28T15:36:25.132299" elapsed="0.172709"/>
 </test>
 <kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-04-28T10:02:06.667835" elapsed="2.109682"/>
+<status status="PASS" start="2025-04-28T15:36:25.305422" elapsed="2.106981"/>
 </kw>
-<status status="PASS" start="2025-04-28T10:02:04.117269" elapsed="4.660334"/>
+<status status="PASS" start="2025-04-28T15:36:22.426794" elapsed="4.985702"/>
 </suite>
-<suite id="s1-s3" name="TestCase1" source="C:\Users\danitc\PycharmProjects\RobotFrameworkTestProject\Tests\TestCase1.robot">
-<test id="s1-s3-t1" name="TEST" line="8">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:08.787389" level="INFO">my test variable</msg>
-<arg>${MY-VARIABLE}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:08.787281" elapsed="0.000146"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:08.787644" level="INFO">test3</msg>
-<arg>${LIST}[2]</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:08.787554" elapsed="0.000121"/>
-</kw>
-<kw name="Log My Specific Username and Password" owner="resources">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:08.788178" level="INFO">testUser</msg>
-<arg>${USERNAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:08.788102" elapsed="0.000107"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:08.788350" level="INFO">demo</msg>
-<arg>${PASSWORD}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:08.788273" elapsed="0.000108"/>
-</kw>
-<arg>${DICTIONARY}[username]</arg>
-<arg>${DICTIONARY}[password]</arg>
-<status status="PASS" start="2025-04-28T10:02:08.787885" elapsed="0.000536"/>
-</kw>
-<tag>demo</tag>
-<tag>demo2</tag>
-<status status="PASS" start="2025-04-28T10:02:08.786956" elapsed="0.001571"/>
-</test>
-<doc>This is my first test case</doc>
-<status status="PASS" start="2025-04-28T10:02:08.778418" elapsed="0.010390"/>
-</suite>
-<suite id="s1-s4" name="TestCase2" source="C:\Users\danitc\PycharmProjects\RobotFrameworkTestProject\Tests\TestCase2.robot">
-<test id="s1-s4-t1" name="SECONDTEST" line="5">
-<kw name="Log My Specific Username and Password" owner="resources">
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:08.791728" level="INFO">testUser2</msg>
-<arg>${USERNAME}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:08.791648" elapsed="0.000113"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-28T10:02:08.791901" level="INFO">demo2</msg>
-<arg>${PASSWORD}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-28T10:02:08.791827" elapsed="0.000102"/>
-</kw>
-<arg>${DICTIONARY2}[username]</arg>
-<arg>${DICTIONARY2}[password]</arg>
-<status status="PASS" start="2025-04-28T10:02:08.791433" elapsed="0.000535"/>
-</kw>
-<tag>demo2</tag>
-<status status="PASS" start="2025-04-28T10:02:08.791091" elapsed="0.000988"/>
-</test>
-<status status="PASS" start="2025-04-28T10:02:08.789231" elapsed="0.003188"/>
-</suite>
-<status status="PASS" start="2025-04-28T10:01:52.468088" elapsed="16.324877"/>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 2 executions.</doc>
+<status status="PASS" start="2025-04-28T15:36:22.415000" elapsed="10.226000"/>
 </suite>
 <statistics>
 <total>
-<stat pass="8" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">demo</stat>
-<stat pass="2" fail="0" skip="0">demo2</stat>
 </tag>
 <suite>
-<stat name="SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2" id="s1" pass="8" fail="0" skip="0">SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2</stat>
-<stat name="SeleniumTC1" id="s1-s1" pass="1" fail="0" skip="0">SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2.SeleniumTC1</stat>
-<stat name="SeleniumTestTemplate" id="s1-s2" pass="5" fail="0" skip="0">SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2.SeleniumTestTemplate</stat>
-<stat name="TestCase1" id="s1-s3" pass="1" fail="0" skip="0">SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2.TestCase1</stat>
-<stat name="TestCase2" id="s1-s4" pass="1" fail="0" skip="0">SeleniumTC1 &amp; SeleniumTestTemplate &amp; TestCase1 &amp; TestCase2.TestCase2</stat>
+<stat name="Suites" id="s1" pass="6" fail="0" skip="0">Suites</stat>
+<stat name="SeleniumTC1" id="s1-s1" pass="1" fail="0" skip="0">Suites.SeleniumTC1</stat>
+<stat name="SeleniumTestTemplate" id="s1-s2" pass="5" fail="0" skip="0">Suites.SeleniumTestTemplate</stat>
 </suite>
 </statistics>
 <errors>
